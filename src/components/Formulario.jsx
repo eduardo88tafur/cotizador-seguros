@@ -1,15 +1,21 @@
 import React from 'react'
+import Marcas from './Marcas'
+import Year from './Year'
+import Plan from './Plan'
 
 const Formulario = () => {
   return (
      <>
      <form>
-         <div>
-             <label  className='block mb-3 font-bold text-black-400 uppercase'>
-                 marca
-             </label>
-                 <select name="marca" className='w-full p-3 bg-white border border-black-200'></select>
-         </div>
+         <Marcas/>
+         <Year/>
+         <Plan/>
+         <input
+    type="submit"
+    className='boton   w-full text-white cursor-pointer p-3 uppercase font-bold rounded-md'
+    value="cotizar"
+    />
+
      </form>
      </>
   )

@@ -1,8 +1,9 @@
 
 import { Fragment } from 'react'
 import { PLANES } from '../constants'
- 
+ import useCotizador from '../hooks/useCotizador'
 const Plan = () => {
+  const {datos,handleChangeDatos}=useCotizador();
   return (
     <div>
     <label  className='block mb-3 font-bold text-black-400 uppercase'>
@@ -18,6 +19,8 @@ const Plan = () => {
                 type="radio" 
                 name= "plan"
                 value={plan.id}
+                onChange={e => handleChangeDatos(e)}
+                
                 />
             </Fragment>
             ))}
